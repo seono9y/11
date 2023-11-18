@@ -6,22 +6,18 @@
 //
 
 #include <stdio.h>
-
-int main(void) {
-    int i;
-    int grade[5];
-    float sum = 0;
-    for (i = 0; i < 5; i++) {
-        printf("Enter grade[%d]: ", i);
-        scanf("%d", &grade[i]);
-    }
-    int *ptr = grade;
-    for (i = 0; i < 5; i++) {
-        printf("grade[%d] = %d\n", i, *(ptr + i));
-        sum += *(ptr + i);
-    }
-    float average = sum / 5;
-       printf("Average: %.2f\n", average);
-
-       return 0;
-   }
+int main(void)
+{
+    char *pc;
+    int *pi;
+    double *pd;
+    pc = (char *)10000;
+    pi = (int *)10000;
+    pd = (double *)10000;
+    printf("증가 전 : pc = %s, pi = %d, pd = %d\n", pc, pi, pd);
+    pc++;
+    pi++;
+    pd++;
+    printf("증가 후 : pc = %s, pi = %d, pd = %d\n", pc, pi, pd);
+    return 0;
+}
